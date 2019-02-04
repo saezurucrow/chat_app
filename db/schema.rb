@@ -10,10 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_22_005639) do
+ActiveRecord::Schema.define(version: 2019_02_04_061047) do
 
-  create_table "messages", force: :cascade do |t|
-    t.text "content"
+# Could not dump table "messages" because of following StandardError
+#   Unknown type 'referencese' for column 'room'
+
+  create_table "rooms", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
